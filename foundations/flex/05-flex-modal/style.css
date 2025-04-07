@@ -20,6 +20,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
+  padding: 12px; /* 3.There is padding around the edge of the modal*/
+  display: flex;
 }
 
 .icon {
@@ -33,6 +36,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  align-self: flex-start; /* 1.Blue Icon is aligned to the left */
+  margin: 8px; /*2.Equal space on either side of the icon */
+  flex-shrink: 0; /*shrink = 0 -> No pueda comprirse */
 }
 
 .close-button {
@@ -66,4 +73,23 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.header { /*5.The header is bold and larger text size. */
+  font-size: larger; 
+  font-weight: bold;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.container { /*4.The header text and buttons are aligned with each other. --- */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lower-buttons {
+  margin: 4px 0 0 4px;
 }
